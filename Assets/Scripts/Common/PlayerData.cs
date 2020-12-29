@@ -28,6 +28,7 @@ public  static class PlayerData
     public static int Critical;
     public static int GuideID;
     public static int Crystal;
+    public static int Fuben;
     public static int[] StrongArr=new int[6];
     public static string[] TaskArr = new string[6];
 }

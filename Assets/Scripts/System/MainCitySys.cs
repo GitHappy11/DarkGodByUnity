@@ -209,8 +209,10 @@ public class MainCitySys : SystemRoot
     {
         taskWnd.SetWndState();
     }
-
-
+    public void OpenFubenWnd()
+    {
+        FuBenSys.Instance.EnterFuben();
+    }
     public void CloseInfoWnd()
     {
         if (camTrans != null)

@@ -199,6 +199,7 @@ public class ResSvc : MonoBehaviour
     }
 
     #endregion
+
     #region MapCfgs
     //存储数据
     private Dictionary<int, MapCfgs> mapCfgsDict = new Dictionary<int, MapCfgs>();
@@ -241,6 +242,9 @@ public class ResSvc : MonoBehaviour
                             break;
                         case "sceneName":
                             mc.sceneName = e.InnerText;
+                            break;
+                        case "power":
+                            mc.power = int.Parse(e.InnerText);
                             break;
                         case "mainCamPos":
                             string[] valArr = e.InnerText.Split(',');

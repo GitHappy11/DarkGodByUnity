@@ -89,6 +89,9 @@ public static class NetDataLoad
                 case (byte)PlayerCode.Crystal:
                     PlayerData.Crystal = int.Parse(item.Value.ToString());
                     break;
+                case (byte)PlayerCode.Fuben:
+                    PlayerData.Fuben = int.Parse(item.Value.ToString());
+                    break;
                 case (byte)PlayerCode.StrongArr:
                     PlayerData.StrongArr = Tools.GetPlayerStrongData((item.Value.ToString()));     
                     break;

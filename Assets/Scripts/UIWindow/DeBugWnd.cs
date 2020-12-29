@@ -10,13 +10,13 @@ using UnityEngine.UI;
 
 public class DeBugWnd :WindowRoot  
 {
-    public Text txtExp;
+    public Text txtFuben;
     public Text txtGuideID;
     public Text txtStrongArr;
     public Text txtTaskArr;
     private void OnEnable()
     {
-        txtExp.text = "当前经验值："+PlayerData.Exp.ToString();
+        txtFuben.text = "当前副本进度："+PlayerData.Fuben;
 
         txtGuideID.text= "当前任务ID：" + PlayerData.GuideID.ToString();
 

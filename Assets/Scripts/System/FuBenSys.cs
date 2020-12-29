@@ -7,7 +7,20 @@
 
 using UnityEngine;
 
-public class FuBenSys : SystemRoot 
+public class FuBenSys : SystemRoot
 {
+    public static FuBenSys Instance = null;
+    public FuBenWnd fuBenWnd;
+    public override void InitSys()
+    {
+        base.InitSys();
+
+        Instance = this;
+    }
+
+    public void EnterFuben()
+    {
+        fuBenWnd.SetWndState();
+    }
 
 }

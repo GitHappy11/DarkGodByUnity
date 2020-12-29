@@ -218,6 +218,7 @@ public class MainCityWnd : WindowRoot
     public void ClickFubenWnd()
     {
         audioSvc.PlayUIAudio(Constants.UIClickBtn);
+        MainCitySys.Instance.OpenFubenWnd();
     }
     public void RegisterTouchEvets()
     {

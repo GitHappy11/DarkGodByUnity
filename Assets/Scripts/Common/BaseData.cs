@@ -11,7 +11,7 @@ public class MapCfgs : BaseData<MapCfgs>
 {
     public string mapName;
     public string sceneName;
-
+    public int power;
     public Vector3 mainCamPos;
     public Vector3 mainCamRote;
 

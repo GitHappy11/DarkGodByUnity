@@ -90,14 +90,19 @@ public class GuideWnd : WindowRoot
                 case 0:
                     break;
                 case 1:
+                    MainCitySys.Instance.OpenFubenWnd();
                     break;
                 case 2:
+                    MainCitySys.Instance.OpenStrongWnd();
                     break;
                 case 3:
+                    MainCitySys.Instance.OpenBuyWnd(0);
                     break;
                 case 4:
+                    MainCitySys.Instance.OpenBuyWnd(1);
                     break;
                 case 5:
+                    MainCitySys.Instance.OpenChatWnd();
                     break;
                 default:
                     break;
