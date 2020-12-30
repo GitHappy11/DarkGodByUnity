@@ -54,6 +54,7 @@ public class Constants
     //登录音乐名称
     public const string BGLogin = "bgLogin";
     public const string BGMainCity = "bgMainCity";
+    public const string BGHuangYe = "bgHuangYe";
     //登录按钮音效
     public const string UILoginBtn = "uiLoginBtn";
     //普通的UI点击音效

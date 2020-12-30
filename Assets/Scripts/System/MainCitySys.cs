@@ -211,7 +211,7 @@ public class MainCitySys : SystemRoot
     }
     public void OpenFubenWnd()
     {
-        FuBenSys.Instance.EnterFuben();
+        FuBenSys.Instance.SetFubenWnd();
     }
     public void CloseInfoWnd()
     {

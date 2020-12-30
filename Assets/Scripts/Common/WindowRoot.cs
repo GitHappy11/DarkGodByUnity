@@ -96,8 +96,12 @@ public class WindowRoot : MonoBehaviour
     #region 图片改变
     public void SetSprite(Image img,string path)
     {
-        Sprite sp = resSvc.LoadSprite(path,true);
-        img.sprite = sp;
+        if (resSvc!=null)
+        {
+            Sprite sp = resSvc.LoadSprite(path, true);
+            img.sprite = sp;
+        }
+        
     }
     #endregion
     //检测游戏对象上是否有相关组件如果没有则获取   检测范围（只能是可以被挂载的组件）

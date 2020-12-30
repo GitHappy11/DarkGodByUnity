@@ -18,9 +18,11 @@ public class FuBenSys : SystemRoot
         Instance = this;
     }
 
-    public void EnterFuben()
+    public void SetFubenWnd(bool isActive=true)
     {
-        fuBenWnd.SetWndState();
+        fuBenWnd.SetWndState(isActive);
     }
+
+ 
 
 }

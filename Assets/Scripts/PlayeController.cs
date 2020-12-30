@@ -56,7 +56,7 @@ public class PlayeController : MonoBehaviour
         //Vector2 _dir = new Vector2(h, v).normalized;
         //if (_dir!=Vector2.zero)
         //{
-        //    Dir = _dir;
+        //    Dir = _dir;2
         //    SetBlend(Constants.BlendWalk);
         //}
         //else

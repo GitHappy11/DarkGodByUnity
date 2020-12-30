@@ -43,8 +43,10 @@ public class GameRoot : MonoBehaviour
         mainCity.InitSys();
         TaskSys taskSys = GetComponent<TaskSys>();
         taskSys.InitSys();
-        FuBenSys fuBenSy = GetComponent<FuBenSys>();
-        fuBenSy.InitSys();
+        FuBenSys fuBenSys = GetComponent<FuBenSys>();
+        fuBenSys.InitSys();
+        BattleSys battleSys = GetComponent<BattleSys>();
+        battleSys.InitSys();
 
         //进入登录场景并加载相应的UI
         login.EnterLogin();

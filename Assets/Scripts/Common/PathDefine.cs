@@ -16,6 +16,7 @@ public class PathDefine
     public const string TaskRewardCfg = "ResCfgs/taskReward";
 
     public const string AssissnCityPlayerPrefab = "PrefabPlayer/AssassinCity";
+    public const string ASsissnBattlePlayerPrefab = "PrefabPlayer/AssassinBattle";
     public const string TaskItemPrefab = "Prefabs/UI/item/Taskitem";
 
 

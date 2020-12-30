@@ -48,6 +48,7 @@ public class FuBenWnd : WindowRoot
             GameRoot.AddTips("进入副本！");
             PlayerData.Power -= resSvc.GetMapCfgData(FubenID).power;
             NetUpdatPlayerData netUpdatPlayerData = new NetUpdatPlayerData();
+            BattleSys.Instance.StartBattle(PlayerData.Fuben);
         }
         else
         {
