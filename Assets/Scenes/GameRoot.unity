@@ -1371,7 +1371,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &129539965
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1742,7 +1742,6 @@ RectTransform:
   m_Children:
   - {fileID: 844418177}
   - {fileID: 1837057881}
-  - {fileID: 1126546012}
   - {fileID: 154322303}
   - {fileID: 1299853101}
   - {fileID: 2057467525}
@@ -1752,8 +1751,9 @@ RectTransform:
   - {fileID: 1139778112}
   - {fileID: 1210333360}
   - {fileID: 1398189645}
-  - {fileID: 2006121089}
   - {fileID: 588942365}
+  - {fileID: 1126546012}
+  - {fileID: 2006121089}
   m_Father: {fileID: 276021754}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1858,7 +1858,7 @@ RectTransform:
   - {fileID: 1881873371}
   - {fileID: 193856159}
   m_Father: {fileID: 149747522}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3761,6 +3761,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d071cbef4818e246877fadcbea4d4d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCtrlWnd: {fileID: 588942366}
+  battleMgr: {fileID: 0}
 --- !u!1 &277687721
 GameObject:
   m_ObjectHideFlags: 0
@@ -4060,7 +4062,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &312958798
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6527,7 +6529,7 @@ RectTransform:
   m_Children:
   - {fileID: 942392972}
   m_Father: {fileID: 149747522}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -7104,6 +7106,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 588942365}
+  - component: {fileID: 588942366}
   m_Layer: 0
   m_Name: PlayerCtrlWnd
   m_TagString: Untagged
@@ -7128,13 +7131,35 @@ RectTransform:
   - {fileID: 537741052}
   - {fileID: 675791503}
   m_Father: {fileID: 149747522}
-  m_RootOrder: 13
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &588942366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588942364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faad9e8df1cf7de4cb3cf2fdc6c2eb14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imgTouch: {fileID: 498778591}
+  imgDirBg: {fileID: 349479252}
+  imgDirPoint: {fileID: 1771330278}
+  txtName: {fileID: 675791504}
+  txtLevel: {fileID: 277687723}
+  txtExpPrg: {fileID: 1177358474}
+  expPrgTrans: {fileID: 77471413}
+  pointDis: 0
+  starPos: {x: 0, y: 0}
+  defaultPos: {x: 0, y: 0}
 --- !u!1 &590979577
 GameObject:
   m_ObjectHideFlags: 0
@@ -8353,7 +8378,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 701318095}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 588942366}
+        m_MethodName: ClickSkill2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &701318095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12801,7 +12837,7 @@ RectTransform:
   m_Children:
   - {fileID: 911400111}
   m_Father: {fileID: 149747522}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -13515,7 +13551,7 @@ RectTransform:
   m_Children:
   - {fileID: 1129566599}
   m_Father: {fileID: 149747522}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -13551,7 +13587,7 @@ GameObject:
   - component: {fileID: 1211763356}
   - component: {fileID: 1211763355}
   m_Layer: 0
-  m_Name: btnAttack
+  m_Name: btnSkill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13618,7 +13654,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1211763356}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 588942366}
+        m_MethodName: ClickSkill1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1211763356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15216,7 +15263,7 @@ RectTransform:
   - {fileID: 406083182}
   - {fileID: 1706447908}
   m_Father: {fileID: 149747522}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -15274,7 +15321,7 @@ RectTransform:
   - {fileID: 1587578111}
   - {fileID: 422742757}
   m_Father: {fileID: 149747522}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -16358,7 +16405,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1552222554
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18491,7 +18538,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1682080176}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 588942366}
+        m_MethodName: ClickNormalAtk
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1682080176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18838,7 +18896,7 @@ RectTransform:
   m_Children:
   - {fileID: 466080750}
   m_Father: {fileID: 149747522}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -22494,7 +22552,7 @@ RectTransform:
   m_Children:
   - {fileID: 1321803606}
   m_Father: {fileID: 149747522}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -23200,7 +23258,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2115281231}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 588942366}
+        m_MethodName: ClickSkill3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2115281231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23939,7 +24008,7 @@ PrefabInstance:
     - target: {fileID: 5011706975661361776, guid: 7670c01659aad244684fd1926c3a43c1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5011706975661361776, guid: 7670c01659aad244684fd1926c3a43c1,
         type: 3}
@@ -24292,7 +24361,7 @@ PrefabInstance:
     - target: {fileID: 7036834102189094497, guid: c63c1fcab203fdc478a466de490735d2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7036834102189094497, guid: c63c1fcab203fdc478a466de490735d2,
         type: 3}
@@ -24421,7 +24490,7 @@ PrefabInstance:
     - target: {fileID: 8789847749802641498, guid: 38023d10d0531324fb2a9ca3dbb69b4c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8789847749802641498, guid: 38023d10d0531324fb2a9ca3dbb69b4c,
         type: 3}

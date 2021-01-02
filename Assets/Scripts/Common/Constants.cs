@@ -88,5 +88,5 @@ public class Constants
 
     //混合参数
     public const int BlendIdel = 0;
-    public const int BlendWalk = 1;
+    public const int BlendMove = 1;
 }

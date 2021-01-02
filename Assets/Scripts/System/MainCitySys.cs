@@ -20,7 +20,7 @@ public class MainCitySys : SystemRoot
     public static MainCitySys Instance = null;
 
     private AutoGuideCfgs curtTaskData;
-    PlayeController playeController;
+    PlayerController playeController;
 
     private Transform camTrans;
     private Transform[] npcPosTrans;
@@ -74,7 +74,7 @@ public class MainCitySys : SystemRoot
         Camera.main.transform.position = mapData.mainCamPos;
         Camera.main.transform.localEulerAngles = mapData.mainCamRote;
 
-        playeController = player.GetComponent<PlayeController>();
+        playeController = player.GetComponent<PlayerController>();
         playeController.Init();
         nav = player.GetComponent<NavMeshAgent>();
 
@@ -97,7 +97,7 @@ public class MainCitySys : SystemRoot
         }
         else
         {
-            playeController.SetBlend(Constants.BlendWalk);
+            playeController.SetBlend(Constants.BlendMove);
         }
         playeController.Dir = dir;
     }
@@ -135,7 +135,7 @@ public class MainCitySys : SystemRoot
                 nav.enabled = true;
                 nav.speed = Constants.PlayerMoveSpeed;
                 nav.SetDestination(npcPosTrans[agc.npcID].position);
-                playeController.SetBlend(Constants.BlendWalk);
+                playeController.SetBlend(Constants.BlendMove);
 
             }
         }

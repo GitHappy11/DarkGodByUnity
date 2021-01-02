@@ -10,6 +10,8 @@ using UnityEngine;
 public class BattleSys : SystemRoot
 {
     public static BattleSys Instance = null;
+    public PlayerCtrlWnd playerCtrlWnd;
+    public BattleMgr battleMgr;
 
     public override void InitSys()
     {
@@ -28,9 +30,29 @@ public class BattleSys : SystemRoot
             name = "BattleRoot"
         };
         go.transform.SetParent(GameRoot.Instance.transform);
-        BattleMgr battleMgr = go.AddComponent<BattleMgr>();
+        battleMgr = go.AddComponent<BattleMgr>();
         battleMgr.Init(mapID);
+        SetPlayerCtrlWnd();
         
 
     }
+
+    public void SetPlayerCtrlWnd(bool isActive=true)
+    {
+        playerCtrlWnd.SetWndState(isActive);
+    }
+
+    public void SetMoveDir(Vector2 dir)
+    {
+        battleMgr.SetSelfPlayerMoveDir(dir);
+        
+    }
+
+
+    public void ReqReleaseSkill(int index)
+    {
+        battleMgr.ReqReleaseSkill(index);
+    }
+
+
 }
